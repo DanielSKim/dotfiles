@@ -21,23 +21,45 @@ brew update
 /opt/homebrew/bin/brew update
 
 echo "Homebrew: Installing packages..."
-#/opt/homebrew/bin/brew install cask
+
 /opt/homebrew/bin/brew install git
+/opt/homebrew/bin/brew install svn
+
+
+/opt/homebrew/bin/brew tap homebrew/cask
+/opt/homebrew/bin/brew tap homebrew/cask-fonts
+
+
+/opt/homebrew/bin/brew install font-open-sans
+/opt/homebrew/bin/brew install font-cascadia-code-pl
+/opt/homebrew/bin/brew install font-cascadia-mono-pl
+/opt/homebrew/bin/brew install font-caskaydia-cove-nerd-font
+
+
+
 arch -x86_64 brew install mas
 /opt/homebrew/bin/brew install mackup
 /opt/homebrew/bin/brew install node
 /opt/homebrew/bin/brew install trash
 
+
+/opt/homebrew/bin/brew install dotnet-sdk
+/opt/homebrew/bin/brew install powershell
+
+/opt/homebrew/bin/brew install 1password
+/opt/homebrew/bin/brew install 1password-cli
 /opt/homebrew/bin/brew install alfred
+/opt/homebrew/bin/brew install azure-data-studio
 /opt/homebrew/bin/brew install beyond-compare
 /opt/homebrew/bin/brew install drawio
-/opt/homebrew/bin/brew install fantastical
+/opt/homebrew/bin/brew install dropbox
 /opt/homebrew/bin/brew install figma
 /opt/homebrew/bin/brew install iterm2
 /opt/homebrew/bin/brew install microsoft-edge
 /opt/homebrew/bin/brew install microsoft-teams
 /opt/homebrew/bin/brew install miro
 /opt/homebrew/bin/brew install notion
+/opt/homebrew/bin/brew install raindropio
 /opt/homebrew/bin/brew install setapp
 /opt/homebrew/bin/brew install snagit
 /opt/homebrew/bin/brew install visual-studio-code
