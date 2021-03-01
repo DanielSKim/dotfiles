@@ -29,7 +29,7 @@ echo "Homebrew: Installing packages..."
 /opt/homebrew/bin/brew tap homebrew/cask
 /opt/homebrew/bin/brew tap homebrew/cask-fonts
 
-
+# https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks
 /opt/homebrew/bin/brew install font-open-sans
 /opt/homebrew/bin/brew install font-cascadia-code-pl
 /opt/homebrew/bin/brew install font-cascadia-mono-pl
@@ -45,6 +45,7 @@ arch -x86_64 brew install mas
 
 /opt/homebrew/bin/brew install dotnet-sdk
 /opt/homebrew/bin/brew install powershell
+/opt/homebrew/bin/brew install azure-cli
 
 /opt/homebrew/bin/brew install 1password
 /opt/homebrew/bin/brew install 1password-cli
@@ -78,6 +79,7 @@ mas install 462062816   #Microsoft PowerPoint
 mas install 784801555   #Microsoft OneNote
 mas install 985367838   #Microsoft Outlook
 mas install 823766827   #OneDrive
+mas install 419330170   #Moom
 
 
 FILE="/Applications/GarageBand.app"
