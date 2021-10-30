@@ -17,7 +17,7 @@ fi
 
 #update brew in case brew is already installed
 echo "Homebrew: Update..."
-brew update
+# brew update
 /opt/homebrew/bin/brew update
 
 echo "Homebrew: Installing packages..."
@@ -37,7 +37,8 @@ echo "Homebrew: Installing packages..."
 
 
 
-arch -x86_64 brew install mas
+#arch -x86_64 brew install mas
+/opt/homebrew/bin/brew install mas
 /opt/homebrew/bin/brew install mackup
 /opt/homebrew/bin/brew install node
 /opt/homebrew/bin/brew install trash
@@ -68,7 +69,7 @@ arch -x86_64 brew install mas
 
 
 mas install 975937182   #Fantastical
-mas install 600925318   #Parallels Client
+# mas install 600925318   #Parallels Client
 mas install 1549370672  #Save to Raindrop.io
 mas install 1477385213  #Save to Pocket
 mas install 405399194   #Kindle
@@ -79,7 +80,17 @@ mas install 462062816   #Microsoft PowerPoint
 mas install 784801555   #Microsoft OneNote
 mas install 985367838   #Microsoft Outlook
 mas install 823766827   #OneDrive
-mas install 419330170   #Moom
+# mas install 419330170   #Moom
+
+
+# NVM
+if test ! $(which nvm); then
+  echo "NVM: Install starting..."
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This load nvm bash_completion
+fi
 
 
 FILE="/Applications/GarageBand.app"

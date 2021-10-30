@@ -1,8 +1,43 @@
 #!/usr/bin/env zsh
 
+# TODO: after the clone of .dotfiles, establish symbolic links
+# TODO: make the logic more robust, loop through all the symbolic links that need to be created
+
+my_link=/users/dsk/.zshrc
+if [ -L ${my_link} ] ; then
+   if [ -e ${my_link} ] ; then
+      echo "${my_link} is a symbolic link"
+   else
+      echo "${my_link} is a broken symbolic link"
+   fi
+elif [ -e ${my_link} ] ; then
+   echo "${my_link} is NOT a symbolic link"
+else
+   echo "${my_link} is missing"
+   ln -sv /users/dsk/.dotfiles/.zshrc /users/dsk/
+   echo "${my_link} symbolic link added"
+fi
+
+
+my_link=/users/dsk/.zprofile
+if [ -L ${my_link} ] ; then
+   if [ -e ${my_link} ] ; then
+      echo "${my_link} is a symbolic link"
+   else
+      echo "${my_link} is a broken symbolic link"
+   fi
+elif [ -e ${my_link} ] ; then
+   echo "${my_link} is NOT a symbolic link"
+else
+   echo "${my_link} is missing"
+   ln -sv /users/dsk/.dotfiles/.zprofile /users/dsk/
+   echo "${my_link} symbolic link added"
+fi
+
+
 # Remove apps from dock
-#defaults write com.apple.dock persistent-apps -array
-#killall "Dock" &> /dev/null
+defaults write com.apple.dock persistent-apps -array
+killall "Dock" &> /dev/null
 
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -22,7 +57,7 @@ sudo nvram SystemAudioValue=" "
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
 
 #Hide Menu Bar
-defaults write NSGlobalDomain "_HIHideMenuBar" -bool true
+#defaults write NSGlobalDomain "_HIHideMenuBar" -bool true
 
 #Don't show Spotlight in menu bar
 defaults remove com.apple.Spotlight "NSStatusItem Visible Item-0"
@@ -44,10 +79,10 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
+#sudo pmset -a displaysleep 15
 
 # Disable machine sleep while charging
-# sudo pmset -c sleep 0
+#sudo pmset -c sleep 0
 
 # Set machine sleep to 5 minutes on battery
 # sudo pmset -b sleep 5
@@ -65,7 +100,7 @@ sudo pmset -a hibernatemode 0
 ###############################################################################
 
 # Finder: show hidden files by default
-#defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Finder: show status bar
@@ -95,12 +130,12 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock launchanim -bool false
 
 # Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+#defaults write com.apple.dock autohide -bool true
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
+# defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
+# defaults write com.apple.dock autohide-time-modifier -float 0
 
 
 
@@ -144,10 +179,10 @@ defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 # Hide Safari’s sidebar in Top Sites
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+# defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
-defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+# defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
@@ -203,3 +238,4 @@ for app in "Activity Monitor" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
+Ss
