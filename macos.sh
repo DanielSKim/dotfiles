@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+git config --global user.name "Daniel Kim"
+git config --global user.email "danielskim@gmail.com"
+
 # TODO: after the clone of .dotfiles, establish symbolic links
 # TODO: make the logic more robust, loop through all the symbolic links that need to be created
 
