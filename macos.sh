@@ -37,20 +37,13 @@ else
    echo "${my_link} symbolic link added"
 fi
 
-
-# Remove apps from dock
-defaults write com.apple.dock persistent-apps -array
-killall "Dock" &> /dev/null
-
-osascript -e 'tell application "System Preferences" to quit'
-
 sudo -v
 
 # Set computer name
-sudo scutil --set ComputerName "dsk-mbp-2020-13"
-sudo scutil --set HostName "dsk-mbp-2020-13"
-sudo scutil --set LocalHostName "dsk-mbp-2020-13"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dsk-mbp-2020-13"
+sudo scutil --set ComputerName "dsk-mbp-2021-16"
+sudo scutil --set HostName "dsk-mbp-2021-16"
+sudo scutil --set LocalHostName "dsk-mbp-2021-16"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "dsk-mbp-2021-16"
 
 
 #Disable the sound effects on boot
@@ -118,7 +111,7 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+#chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 # Show the /Volumes folder
 # sudo chflags nohidden /Volumes
 
@@ -241,4 +234,9 @@ for app in "Activity Monitor" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
-Ss
+
+# Remove apps from dock
+defaults write com.apple.dock persistent-apps -array
+killall "Dock" &> /dev/null
+
+osascript -e 'tell application "System Preferences" to quit'
