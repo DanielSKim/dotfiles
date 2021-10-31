@@ -1,0 +1,154 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "type": "az",
+            "style": "plain",
+            "foreground": "#2563eb",
+            "properties": {
+              "display_id": false,
+              "display_name": true,
+              "info_separator": " @ ",
+              "prefix": " \uFD03 "
+            }
+          },
+          {
+            "type": "path",
+            "style": "plain",
+            "foreground": "#6B7280",
+            "properties": {
+              "folder_icon": "\uF115",
+              "folder_separator_icon": " \uE0B1 ",
+              "style": "full"
+            }
+          },
+          {
+            "type": "git",
+            "style": "diamond",
+  
+            "properties": {
+              "display_stash_count": true,
+              "display_upstream_icon": true,
+              "display_status": true,
+              "status_colors_enabled": true,
+              "color_background": false,
+              "local_changes_color": "#fde68a",
+              "working_color": "#fecaca",
+              "staging_color": "#d1fae5",
+              "ahead_color": "#2EC4B6",
+              "behind_color": "#8A4FFF",
+              "prefix": "<#7a7a7a>\ue0b1 </>"
+            }
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "right",
+        "segments": [
+          {
+            "type": "node",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "invert_powerline": true,
+            "foreground": "#ffffff",
+            "background": "#689f63",
+            "properties": {
+              "postfix": " \uF898 ",
+              "display_version": true
+            }
+          },
+          {
+            "type": "python",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "invert_powerline": true,
+            "foreground": "#111111",
+            "background": "#FFDE57",
+            "properties": {
+              "postfix": " \uE235 ",
+              "display_version": true,
+              "display_mode": "files",
+              "display_virtual_env": false
+            }
+          },
+          {
+            "type": "azfunc",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "invert_powerline": true,
+            "foreground": "#ffffff",
+            "background": "#FEAC19",
+            "properties": {
+              "postfix": " \uf0e7",
+              "display_version": false,
+              "display_mode": "files"
+            }
+          },
+          {
+            "type": "executiontime",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "invert_powerline": true,
+            "foreground": "#000000",
+            "background": "#fde68a",
+            "properties": {
+              "postfix": " \uF252 "
+            }
+          },
+          {
+            "type": "exit",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "invert_powerline": true,
+            "foreground": "#d3d7cf",
+            "background": "#e5e7eb",
+            "properties": {
+              "always_enabled": true,
+              "display_exit_code": true,
+              "error_color": "#ff8080",
+              "color_background": true,
+              "success_icon": "✔"
+            }
+          },
+          {
+            "type": "time",
+            "style": "diamond",
+            "invert_powerline": true,
+  
+            "background": "#6b7280",
+            "foreground": "#000000",
+            "properties": {
+              "postfix": " \uF017 "
+            }
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "type": "exit",
+            "style": "plain",
+            "foreground": "#bfdbfe",
+            "properties": {
+              "prefix": "\u276f",
+              "display_exit_code": false,
+              "error_color": "#BF616A",
+              "always_enabled": true
+            }
+          }
+        ]
+      }
+    ],
+    "final_space": true,
+    "console_title": true,
+    "console_title_style": "template",
+    "console_title_template": "{{ .Shell }} in {{ .Folder }}"
+  }

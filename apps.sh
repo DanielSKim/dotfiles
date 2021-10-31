@@ -29,6 +29,8 @@ echo "Homebrew: Installing packages..."
 /opt/homebrew/bin/brew tap homebrew/cask
 /opt/homebrew/bin/brew tap homebrew/cask-drivers
 /opt/homebrew/bin/brew tap homebrew/cask-fonts
+/opt/homebrew/bin/brew tap isen-ng/dotnet-sdk-versions
+/opt/homebrew/bin/brew tap jandedobbeleer/oh-my-posh
 
 # https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks
 /opt/homebrew/bin/brew install font-open-sans
@@ -44,10 +46,11 @@ echo "Homebrew: Installing packages..."
 /opt/homebrew/bin/brew install node
 /opt/homebrew/bin/brew install trash
 
-
 /opt/homebrew/bin/brew install dotnet-sdk
 /opt/homebrew/bin/brew install powershell
 /opt/homebrew/bin/brew install azure-cli
+
+/opt/homebrew/bin/brew install oh-my-posh
 
 /opt/homebrew/bin/brew install 1password
 /opt/homebrew/bin/brew install 1password-cli
