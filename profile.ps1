@@ -1,0 +1,1 @@
+oh-my-posh --init --shell pwsh --config ~/.dotfiles/dsk.omp.json | Invoke-Expression

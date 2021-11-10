@@ -67,6 +67,7 @@ echo "Homebrew: Installing packages..."
 /opt/homebrew/bin/brew install microsoft-teams
 /opt/homebrew/bin/brew install miro
 /opt/homebrew/bin/brew install notion
+/opt/homebrew/bin/brew install obsidian
 /opt/homebrew/bin/brew install raindropio
 /opt/homebrew/bin/brew install setapp
 /opt/homebrew/bin/brew install snagit
@@ -98,9 +99,6 @@ mas install 419330170   #Moom
 if test ! $(which nvm); then
   echo "NVM: Install starting..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This load nvm bash_completion
 fi
 
 

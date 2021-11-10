@@ -21,7 +21,6 @@ else
    echo "${my_link} symbolic link added"
 fi
 
-
 my_link=/users/dsk/.zprofile
 if [ -L ${my_link} ] ; then
    if [ -e ${my_link} ] ; then
@@ -36,6 +35,32 @@ else
    ln -sv /users/dsk/.dotfiles/.zprofile /users/dsk/
    echo "${my_link} symbolic link added"
 fi
+
+if [ ! -d "/Users/dsk/.config" ] 
+then                                                     
+    mkdir /Users/dsk/.config
+fi
+
+if [ ! -d "/Users/dsk/.config/powershell" ] 
+then                                                     
+    mkdir /Users/dsk/.config/powershell
+fi
+
+my_link=/Users/dsk/.config/powershell/Microsoft.PowerShell_profile.ps1
+if [ -L ${my_link} ] ; then
+   if [ -e ${my_link} ] ; then
+      echo "${my_link} is a symbolic link"
+   else
+      echo "${my_link} is a broken symbolic link"
+   fi
+elif [ -e ${my_link} ] ; then
+   echo "${my_link} is NOT a symbolic link"
+else
+   echo "${my_link} is missing"
+   ln -sv /users/dsk/.dotfiles/profile.ps1 $my_link
+   echo "${my_link} symbolic link added"
+fi
+
 
 sudo -v
 
@@ -126,7 +151,7 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock launchanim -bool false
 
 # Automatically hide and show the Dock
-#defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool true
 
 # Remove the auto-hiding Dock delay
 # defaults write com.apple.dock autohide-delay -float 0
