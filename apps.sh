@@ -75,8 +75,8 @@ echo "Homebrew: Installing packages..."
 /opt/homebrew/bin/brew install zoom
 
                         # 1Password for Safari
-                        # Affinity Designer
-                        # Affinity Photo
+mas install 824171161   #Affinity Designer
+mas install 824183456   #Affinity Photo
 mas install 975937182   #Fantastical
 # mas install 600925318   #Parallels Client
 mas install 405399194   #Kindle
@@ -85,11 +85,11 @@ mas install 462054704   #Microsoft Word
 mas install 462062816   #Microsoft PowerPoint 
 mas install 784801555   #Microsoft OneNote
 mas install 985367838   #Microsoft Outlook
-                        # Notion Web Clipper
+mas install 1559269364  #Notion Web Clipper
 mas install 823766827   #OneDrive
 mas install 1549370672  #Save to Raindrop.io
 mas install 1477385213  #Save to Pocket
-                        #Shareful
+mas install 1522267256  #Shareful
 mas install 585829637   #Todoist
 mas install 419330170   #Moom
 
