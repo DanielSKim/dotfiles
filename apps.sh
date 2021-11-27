@@ -74,9 +74,12 @@ echo "Homebrew: Installing packages..."
 /opt/homebrew/bin/brew install visual-studio-code
 /opt/homebrew/bin/brew install zoom
 
+/opt/homebrew/bin/brew install --cask raycast
+
                         # 1Password for Safari
 mas install 824171161   #Affinity Designer
 mas install 824183456   #Affinity Photo
+mas install 1024640650  #CotEditor
 mas install 975937182   #Fantastical
 # mas install 600925318   #Parallels Client
 mas install 405399194   #Kindle
